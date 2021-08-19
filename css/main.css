@@ -339,12 +339,15 @@ body {
 }
 
 .rover-action-quote-container{
-  position: absolute;
+  position: relative;
   width: 300px;
   height: 200px;
   background-color: white;
+  border: green 1px solid;
   padding: 5px;
-  
+  top: -40px; 
+  left: 40px;
+  padding-bottom: 5px;
 }
 
 .rover-action-quote-container a{
