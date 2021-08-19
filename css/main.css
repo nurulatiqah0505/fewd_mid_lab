@@ -35,14 +35,33 @@ body {
   padding-right: 10px;
 }
 
+.rover-header-container a:hover{
+ font-size: larger;
+}
+
 /* bagi menu kiri kanan center */
 .rover-header-left,
 .rover-header-right{
   display: flex;
   align-items: center;
   padding: 10px;
-  
 }
+
+/* mobile menu */
+#mobile_menu{
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  /* display none below is when open website doesnt
+  show the menu, until user click menu logo
+   */
+  display: none;
+}
+
 
 /* mobile */
 @media only screen 
@@ -52,6 +71,46 @@ body {
     .rover-header-container a{
       display: none;
       }
+
+      
+/* mobile menu */
+    .flexMobile{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+  }
+
+    .flexMobile a{
+      background-color: white;
+      color: green;
+      text-decoration: none;
+      font-size: larger;
+      font-weight: bold;
+      padding: 10px;
+  }
+
+  .show{
+    /*!important overrides all*/
+    display: block !important;
+    animation: showmenu .35s ease-in-out;
+  }
+
+  @keyframes showmenu {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
 }
 
 
@@ -63,6 +122,11 @@ body {
     .rover-header-right-mobile{
       display: none;
     }
+
+    /* hide mobile menu on desktop */
+  #mobile_menu{
+    display: none;
+  }
 }
 
 /* @media only screen and (max-width:600px) {
@@ -156,11 +220,14 @@ body {
 
 }
 
+
+
 /* for laptop, desktop */
 @media only screen and (min-width:1024px) {
   .rover-cta-mobile{
   display: none;
   }
+
 }
 /* Hero Container----------------------------------------- */
 

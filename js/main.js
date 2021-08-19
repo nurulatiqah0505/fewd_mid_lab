@@ -17,3 +17,12 @@
  * 1) Make the responsive menu work!
  * 2) Implement a modal window - "Sign up now" CTA when someone clicks the 'Sign Up' button
  */ 
+
+ document.querySelector("button").addEventListener("click", function(){
+    document.querySelector("#mobile_menu").classList.add("show")
+})
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector("#mobile_menu").classList.remove("show")
+    document.querySelector("#mobile_menu").classList.add("hide")
+})
