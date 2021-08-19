@@ -77,9 +77,17 @@ body {
     .flexMobile{
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      /* justify-content: center;
       align-items: center;
-      height: 100%;
+      height: 100%; */
+      /* background-color: #14a96df0; */
+      position: absolute;
+      right: 0;
+      top: 7%;
+      width: 100%;
+      
+
+
   }
 
     .flexMobile a{
